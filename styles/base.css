@@ -19,8 +19,9 @@ display: flex;
 }
 
 h1, footer , h2 {
-    background-color: #4d88bb
+    background-color: #4d88bb;
+    padding: 20px
 }
 *{
-    color: #f4f0f0 
+    color: #f4f0f0
 }

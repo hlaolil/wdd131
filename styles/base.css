@@ -4,14 +4,23 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    padding: 10px;
+    gap: 50px;
 
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .container a {
 display: flex;
-
+color: blanchedalmond;
 }
 
 h1, footer , h2 {
     background-color: #6491b8
+    color(srgb rgb(235, 230, 230) green blue)
 }
+

@@ -1,7 +1,18 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    margin: 0;
+}
+
 header, footer {
     background-color: #4d88bb;
     color: azure;
+    text-align: center;
+    border-radius: 10px; /* Adjust the value as needed */
 }
+
 nav ul {
     display: flex;
     background-color: #565858;
@@ -10,11 +21,11 @@ nav ul {
     flex-direction: row;
     padding: 10px;
     gap: 20px;
-
+    border-radius: 10px; /* Adjust the value as needed */
 }
 
 nav li {
-display: flex;
+    display: flex;
 }
 
 nav ul li a {
@@ -29,13 +40,57 @@ nav ul li a {
 .card {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid #565858;
+    border-radius: 10px; /* Adjust the value as needed */
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    background-color: rgb(95, 94, 94);
+    margin: 20px 0;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+h3 {
+    text-align: center;
+}
 
 h1, h2 {
     background-color: #4d88bb;
-    padding: 20px;
+    padding: 10px;
     color: azure;
-    
+    border-radius: 10px; /* Adjust the value as needed */
+    margin: 0;
+    height: fit-content;
 }
 
+footer {
+    padding: 10px;
+    margin-top: 0;
+    border-radius: 10px; /* Adjust the value as needed */
+}
+
+card ul {
+    padding: 0;
+    margin-left: 20px;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+}
+
+.card ul li a {
+    text-decoration: none;
+    color:blue;
+    transition: color 0.3s;
+}
+
+.card ul li a:hover {
+    color:#4d88bb;
+}

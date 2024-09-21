@@ -94,3 +94,8 @@ footer {
 .card ul li a:hover {
     color:#4d88bb;
 }
+
+.about img {
+    position: absolute;
+    display: flex;
+}

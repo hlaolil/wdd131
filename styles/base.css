@@ -76,7 +76,7 @@ footer {
     border-radius: 10px; /* Adjust the value as needed */
 }
 
-card ul {
+.card ul {
     padding: 0;
     margin-left: 20px;
 }

@@ -3,7 +3,7 @@ body {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
     height: 100vh;
-    margin: 0;
+    margin: 10px;
 }
 
 header, footer {
@@ -46,6 +46,7 @@ nav ul li a {
     margin-top: 20px;
     border: 1px solid #565858;
     border-radius: 10px; /* Adjust the value as needed */
+    justify-content: center;
 }
 
 hr {
@@ -93,6 +94,7 @@ footer {
 
 .card ul li a:hover {
     color:#4d88bb;
+    
 }
 
 .about img {
@@ -100,5 +102,14 @@ footer {
     display: flex;
 }
 main {
-    width: auto;
+    width: 1000px;
+    display: grid; place-self: center;
+}
+
+.about {
+    margin: 10px;
+}
+
+.country {
+    margin: 10px;
 }

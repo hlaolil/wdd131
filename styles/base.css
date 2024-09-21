@@ -99,3 +99,6 @@ footer {
     position: absolute;
     display: flex;
 }
+main {
+    width: auto;
+}

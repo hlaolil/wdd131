@@ -46,7 +46,7 @@ nav ul li a {
     border: 1px solid #cadada;
     border-radius: 10px; /* Adjust the value as needed */
     justify-content: center;
-    height: 700px
+    height: 700px;
 }
 
 hr {
@@ -97,10 +97,7 @@ footer {
     
 }
 
-.about img {
-    position: absolut; 
     
-}
 main {
     max-width: 1000px;
     display: grid; place-self: center;
@@ -112,9 +109,20 @@ main {
 }
 .country img {
     display: flex;
+    position: relative;
+    flex-direction: row;
+}
+.country p {
+    flex-direction: row;
 }
 
 .country {
     margin: 10px;
+    
+}
+
+.lesotho p, img {
+    display: flex;
+    flex-direction: column;
     
 }

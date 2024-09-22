@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Letlotlo Hlaoli">
     <meta name="description" content="A basic website for Letlotlo Hlaoli to practice skills learned in the course WDD131 - Dynamic Web Fundamentals">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>WDD 131 - Dynamic Web Fundamentals - Letlotlo Hlaoli</title>
     <link rel="stylesheet" href="styles/base.css">
+    <script defer src="scripts/getdates.js"></script>
 </head>
 <body>
     <header>
@@ -33,7 +37,7 @@
             
 
             <div class="country">
-                <h3>Lesotho</h3>
+                <h3>Butha-Buthe, Lesotho</h3>
                 <hr>
 
                 <p>
@@ -53,8 +57,10 @@
         </section>
     </main>
     <footer>
-        <p>Footer Content</p>
-        <p>Footer Content</p>
+        <p id="symbol-date-name"></p>
+            &copy;<span id="currentyear"></span> Letlotlo Hlaoli - Butha-Buthe, LS
+        </p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>

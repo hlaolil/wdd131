@@ -1,0 +1,34 @@
+@media screen and (min-width: 600px) {
+    #temples-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    figure {
+        margin: 1rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .ham-button {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        width: 500px;
+        background-color: gray;
+    }
+
+    nav a {
+        color: rgb(219, 219, 219);
+    }
+
+    nav a:hover {
+        transform: scale(1.5);
+        background-color: transparent;
+    }
+}

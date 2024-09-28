@@ -12,7 +12,7 @@ lastModified.innerHTML = `Last Modified: ${lastMod}`;
 
 //hamburger button event
 const hamButton = document.querySelector(".ham-button");
-const menu = document.querySelector("nav");
+const menu = document.querySelector("nav")
 
 hamButton.addEventListener("click", () => {
     hamButton.classList.toggle("active");

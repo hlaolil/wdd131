@@ -1,5 +1,5 @@
 body {
-    background-color: white
+    background-color: whitesmoke
 }
 header {
     background-color: rgb(50, 150, 218);
@@ -12,7 +12,7 @@ header {
 #title {
     font-family: "Protest Guerrilla", sans-serif;
     font-weight: 400;
-    color: rgb(219, 219, 219);
+    color: white;
     padding: 1rem;
 }
 
@@ -25,6 +25,7 @@ nav {
     left: 0;
     width: 100%;
     display: none;
+    color: white;
 }
 
 nav.active {
@@ -129,7 +130,7 @@ figcaption {
 
 footer {
     background-color:  rgb(50, 150, 218);
-    color: rgb(219, 219, 219);
+    color: white;
     padding: 1rem;
     font-family: "Protest Guerrilla", sans-serif;
     text-align: center;
@@ -142,5 +143,5 @@ footer {
 
 #lastModified,
 #symbol-date-name {
-    color: rgb(219, 219, 219);
+    color: white
 }

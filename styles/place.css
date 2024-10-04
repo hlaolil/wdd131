@@ -1,0 +1,144 @@
+:root {
+    --primary-color: #0B3D91; /* Deep ocean blue */
+    --secondary-color: #F4E2D8; /* Sandy beige */
+    --accent-color: #FF6F00; /* Sun orange */
+    --background-color: #A8D0E6; /* Sky blue */
+    --text-color: #2E2E2E; /* Charcoal gray */
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 5px solid var(--accent-color);
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.data, .weather {
+    position: absolute;
+    background-color: rgba(244, 226, 216, 0.8); /* Lighter, transparent sandy beige */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    width: 350px;
+}
+
+.data {
+    top: 30px;
+    left: 30px;
+}
+
+.weather {
+    bottom: 30px;
+    right: 30px;
+}
+
+.data h2, .weather h2 {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    justify-content: space-between;
+}
+
+.weather h2::after {
+    content: "⛅";
+    display: none;
+    font-size: 2.1rem;
+    margin-left: 10px;
+}
+
+@media (min-width: 800px) {
+    .weather-icon {
+        display: none;
+    }
+
+    .weather h2::after {
+        display: inline;
+    }
+}
+
+@media (max-width: 799px) {
+    .weather h2::after {
+        display: none;
+    }
+
+    .weather-icon {
+        display: inline-block;
+    }
+}
+
+.data li, .weather li {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.5rem 0;
+}
+
+.weather-icon, .data-icon img {
+    width: 48px;
+    height: 48px;
+    vertical-align: middle;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+    .data, .weather {
+        position: static;
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero img {
+        border: none;
+        width: 100%;
+    }
+
+    header, footer {
+        width: 100%;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Letlotlo Hlaoli">
+    <meta name="description" content="A basic website for Letlotlo Hlaoli to practice skills learned in the course WDD131 - Dynamic Web Fundamentals">
+    <meta name="keywords" content="Cape Town, South Africa, weather, data, tourism">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>WDD 131 - Dynamic Web Fundamentals - Letlotlo Hlaoli</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script defer src="scripts/place.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Cape Town</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/capetown-large.avif" media="(min-width: 1200px)">
+                <source srcset="images/capetown-medium.jpg" media="(min-width: 800px)">
+                <img src="images/capetown-small.jpeg" alt="cape town" width="1160" height="580">
+            </picture>
+
+            <section class="data">
+                <h2>Data <span class="data-icon">
+                    <img src="images/Data_SVG.svg" alt="Data Icon" />
+                </span></h2>
+                <ul>
+                    <li><strong>Area:</strong> <span id="area"></span></li>
+                    <li><strong>Population:</strong> <span id="population"></span></li>
+                    <li><strong>Province:</strong> <span id="state">Western Cape</span></li>
+                    <li><strong>Languages:</strong> <span id="languages">English, Afrikaans, Xhosa</span></li>
+                    <li><strong>Currency:</strong> <span id="currency">South African Rand (ZAR)</span></li>
+                    <li><strong>Time Zone:</strong> <span id="timezone">UTC+2</span></li>
+                    <li><strong>Calling Code:</strong> <span id="callingCode">+27</span></li>
+                    <li><strong>Internet TLD:</strong> <span id="internetTLD">.za</span></li>
+                </ul>
+            </section>
+
+            <section class="weather">
+                <h2>Weather <span class="weather-icon"></span></h2>
+                <ul>
+                    <li><strong>Temperature:</strong> <span id="temperature"></span></li>
+                    <li><strong>Conditions:</strong> <span id="conditions"></span></li>
+                    <li><strong>Wind:</strong> <span id="wind"></span></li>
+                    <li><strong>Wind Chill:</strong> <span id="windChill"></span></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p id="symbol-date-name">
+            &copy; <span id="currentyear"></span> Letlotlo Hlaoli - Butha-Buthe, LS
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

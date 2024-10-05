@@ -142,3 +142,12 @@ footer {
         width: 100%;
     }
 }
+
+#lastModified {
+    font-size: smaller;
+}
+
+#lastModified,
+#symbol-date-name {
+    color: white
+}

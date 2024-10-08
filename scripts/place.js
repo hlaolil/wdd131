@@ -60,29 +60,5 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("windChill").textContent = windChillValue;
 
     // Weather icon selector
-    const weatherIcons = {
-        "Sunny": "day.svg",
-        "Cloudy": "cloudy-day-1.svg",
-        "Rainy": "rainy-1.svg",
-        "Snowy": "snowy-1.svg",
-        "Thunder": "thunder.svg"
-    };
-
-    const iconFilename = weatherIcons[weather.conditions] || "day.svg";
-
-    // Debugging: Log weather condition and selected icon
-    console.log(`Weather condition: ${weather.conditions}`);
-    console.log(`Selected icon: ${iconFilename}`);
-
-    fetch(`images/weather_icons/${iconFilename}`)
-        .then(response => response.text())
-        .then(svg => {
-            const weatherIconContainer = document.querySelector('.weather-icon');
-            if (weatherIconContainer) {
-                weatherIconContainer.innerHTML = svg;
-            } else {
-                console.error('.weather-icon element not found in DOM.');
-            }
-        })
-        .catch(error => console.error('Error loading SVG:', error));
+    
 });

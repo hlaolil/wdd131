@@ -59,6 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("wind").textContent = `${weather.windSpeed} mph`;
     document.getElementById("windChill").textContent = windChillValue;
 
-    // Weather icon selector
+    
     
 });

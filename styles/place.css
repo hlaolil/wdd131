@@ -72,28 +72,14 @@ header {
 
 .weather h2::after {
     content: "⛅";
-    display: none;
+    display: none; /* Initially hidden */
     font-size: 2.1rem;
     margin-left: 10px;
 }
 
-@media (min-width: 800px) {
-    .weather-icon {
-        display: none;
-    }
-
-    .weather h2::after {
-        display: inline;
-    }
-}
-
 @media (max-width: 799px) {
     .weather h2::after {
-        display: none; /* Hide the icon in mobile view */
-    }
-
-    .weather-icon {
-        display: inline-block; /* Show the icon in mobile view */
+        display: inline; /* Show the icon in mobile view */
     }
 
     .data, .weather {
@@ -114,6 +100,12 @@ header {
 
     header, footer {
         width: 100%;
+    }
+}
+
+@media (min-width: 800px) {
+    .weather h2::after {
+        display: none; /* Hide the icon on larger screens */
     }
 }
 

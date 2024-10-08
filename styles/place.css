@@ -89,11 +89,11 @@ header {
 
 @media (max-width: 799px) {
     .weather h2::after {
-        display: none;
+        display: none; /* Hide the icon in mobile view */
     }
 
     .weather-icon {
-        display: inline-block;
+        display: inline-block; /* Show the icon in mobile view */
     }
 
     .data, .weather {

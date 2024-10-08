@@ -1,4 +1,4 @@
-//Same footer as home page, so same JavaScript.
+// Same footer as home page, so same JavaScript.
 const year = document.querySelector("#currentyear");
 const lastModified = document.querySelector("#lastModified");
 
@@ -6,7 +6,7 @@ const lastModified = document.querySelector("#lastModified");
 const date = new Date();
 year.innerHTML = date.getFullYear();
 
-//get the last modification date of the home page
+// get the last modification date of the home page
 let lastMod = document.lastModified;
 lastModified.innerHTML = `Last Modified: ${lastMod}`;
 
@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function calculateWindChill(temp, speed) {
         return (
             35.74 +
-            0.6215 * temp - 
-            35.75 * Math.pow(speed, 0.16) + 
+            0.6215 * temp -
+            35.75 * Math.pow(speed, 0.16) +
             0.4275 * temp * Math.pow(speed, 0.16)
         ).toFixed(1);
     }
@@ -70,10 +70,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const iconFilename = weatherIcons[weather.conditions] || "day.svg";
 
+    // Debugging: Log weather condition and selected icon
+    console.log(`Weather condition: ${weather.conditions}`);
+    console.log(`Selected icon: ${iconFilename}`);
+
     fetch(`images/weather_icons/${iconFilename}`)
         .then(response => response.text())
         .then(svg => {
-            document.querySelector('.weather-icon').innerHTML = svg;
+            const weatherIconContainer = document.querySelector('.weather-icon');
+            if (weatherIconContainer) {
+                weatherIconContainer.innerHTML = svg;
+            } else {
+                console.error('.weather-icon element not found in DOM.');
+            }
         })
         .catch(error => console.error('Error loading SVG:', error));
 });

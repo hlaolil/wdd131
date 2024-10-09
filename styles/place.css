@@ -70,16 +70,24 @@ header {
     justify-content: space-between;
 }
 
+.weather-icon img {
+    display: none;
+}
+
 .weather h2::after {
     content: "⛅";
-    display: none; /* Initially hidden */
+    display: inline; /* Initially shown */
     font-size: 2.1rem;
     margin-left: 10px;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 800px) {
     .weather h2::after {
-        display: inline; /* Show the icon in mobile view */
+        content: "⛅";
+        display: none;
+    }
+    .weather-icon img {
+    display: inline;
     }
 
     .data, .weather {
@@ -103,11 +111,6 @@ header {
     }
 }
 
-@media (min-width: 800px) {
-    .weather h2::after {
-        display: none; /* Hide the icon on larger screens */
-    }
-}
 
 .data li, .weather li {
     font-family: Arial, sans-serif;

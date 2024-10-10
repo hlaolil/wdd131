@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const weather = {
-        temperature: 68, // Fahrenheit
+        temperature: 48, // Fahrenheit
         conditions: "Sunny", // Change this to change the icon
         windSpeed: 12 // mph
     };

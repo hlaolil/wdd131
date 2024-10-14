@@ -19,12 +19,12 @@
 <body>
     <header>
         <h1 id="title">Temple Album</h1>
-        <div class="ham-button">
+        <div class="ham-button" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <nav>
+        <nav id="nav-menu">
             <a href="#" data-filter="all" class="active">Home</a>
             <a href="#" data-filter="old">Old</a>
             <a href="#" data-filter="new">New</a>
@@ -34,15 +34,16 @@
     </header>
 
     <main>
-        <h2>Home</h2>
-        <div id="temples-list">
-            
+        <div class="centered-text">
+            <h2>All Temples</h2>
+            <h3></h3>
         </div>
+        <div id="temples-list"></div>
     </main>
 
     <footer>
         <p id="symbol-date-name">
-            &copy;<span id="currentyear"></span>Letlotlo Hlaoli - Butha-Buthe, LS
+            &copy;<span id="currentyear"></span> Letlotlo Hlaoli - Butha-Buthe, LS
         </p>
         <p id="lastModified"></p>
     </footer>

@@ -94,12 +94,12 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-43596-thumb.jpg"
       },
       {
-        templeName: "Mexico City Mexico",
-        location: "Mexico City, Mexico",
-        dedicated: "1983, December, 2",
-        area: 116642,
+        templeName: "Harare Zimbabwe",
+        location: "Harare, Zimbabwe",
+        dedicated: "2020, December, 12",
+        area: 17250,
         imageUrl:
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+        "https://churchofjesuschristtemples.org/assets/img/temples/harare-zimbabwe-temple/harare-zimbabwe-temple-51322-thumb.jpg"
       },
   ];
 

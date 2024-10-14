@@ -102,3 +102,74 @@ const temples = [
         "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
       },
   ];
+
+  function renderTemples(filteredTemples) {
+    const templeList = document.getElementById('temples-list');
+    templeList.innerHTML = '';
+    filteredTemples.forEach(temple => {
+      const templeCard = document.createElement('figure');
+      templeCard.innerHTML = `
+        <img src="${temple.imageUrl}" alt="${temple.alt}" loading="lazy" width="400" height="250">
+        <figcaption>${temple.templeName}</figcaption>
+        <p>Location: ${temple.location}</p>
+        <p>Dedicated: ${temple.dedicated}</p>
+        <p>Area: ${temple.area} sq. ft.</p>
+      `;
+      templeList.appendChild(templeCard);
+    });
+  }
+  
+
+function filterTemples(filter) {
+  switch (filter) {
+    case 'old':
+      return temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+    case 'new':
+      return temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+    case 'large':
+      return temples.filter(temple => temple.area > 90000);
+    case 'small':
+      return temples.filter(temple => temple.area < 10000);
+    default:
+      return temples;
+  }
+}
+
+function updateCenteredText(filter) {
+  switch (filter) {
+    case 'old':
+      centeredTextH2.textContent = 'Old Temples';
+      centeredTextH3.textContent = 'Temples dedicated before 1900.';
+      break;
+    case 'new':
+      centeredTextH2.textContent = 'New Temples';
+      centeredTextH3.textContent = 'Temples dedicated after 2000.';
+      break;
+    case 'large':
+      centeredTextH2.textContent = 'Large Temples';
+      centeredTextH3.textContent = 'Temple area is greater than 90,000 square feet.';
+      break;
+    case 'small':
+      centeredTextH2.textContent = 'Small Temples';
+      centeredTextH3.textContent = 'Temple area is less than 10,000 square feet.';
+      break;
+    default:
+      centeredTextH2.textContent = 'All Temples';
+      centeredTextH3.textContent = 'Displaying all temples without any filter.';
+      break;
+  }
+}
+
+document.querySelectorAll('#nav-menu a').forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const filter = event.target.dataset.filter;
+    document.querySelectorAll('#nav-menu a').forEach(link => link.classList.remove('active'));
+    event.target.classList.add('active');
+    renderTemples(filterTemples(filter));
+    updateCenteredText(filter);
+  });
+});
+
+renderTemples(temples);
+updateCenteredText('all');

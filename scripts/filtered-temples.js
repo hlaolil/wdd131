@@ -10,35 +10,37 @@ let lastMod = document.lastModified;
 lastModified.textContent = `Last Modified: ${lastMod}`;
 
 // Hamburger button event
+// Wait for the DOM to fully load
 document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
-  const centeredTextH2 = document.querySelector('.centered-text h2');
-  const centeredTextH3 = document.createElement('h3');
-  centeredTextH3.style.marginTop = '0.5rem';
-  centeredTextH2.insertAdjacentElement('afterend', centeredTextH3);
+    // Select elements
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const centeredTextH2 = document.querySelector('.centered-text h2');
   
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
-    hamburger.innerHTML = hamburger.classList.contains('active') ? 'X' : '&#9776;';
-  });
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 1000) {
-      navMenu.classList.remove('active');
-      hamburger.classList.remove('active');
-      hamburger.innerHTML = '&#9776;';
-    }
-  });
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-      navMenu.classList.remove('active');
-      hamburger.classList.remove('active');
-      hamburger.innerHTML = '&#9776;';
-    }
-  });
+    // Create and insert a new h3 element after h2
+    const centeredTextH3 = document.createElement('h3');
+    centeredTextH3.style.marginTop = '0.5rem';
+    centeredTextH3.textContent = 'Your Heading Here'; // Add appropriate text
+    centeredTextH2.insertAdjacentElement('afterend', centeredTextH3);
+  
+    // Hamburger click event to toggle the navigation menu
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active'); // Toggle active class for the nav menu
+      hamburger.classList.toggle('active'); // Toggle active class for the hamburger button
+  
+      // Change hamburger icon based on active state
+      hamburger.innerHTML = hamburger.classList.contains('active') ? 'X' : '&#9776;';
+    });
+  
+    // Resize event to handle navigation menu visibility
+    window.addEventListener('resize', () => {
+      // Remove active classes if the window is wider than 1000px
+      if (window.innerWidth > 1000) {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.innerHTML = '&#9776;'; // Reset hamburger icon
+      }
+    });
 
   const temples = [
     {

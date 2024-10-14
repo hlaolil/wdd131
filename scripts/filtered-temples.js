@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       default:
         centeredTextH2.textContent = 'All Temples';
-        centeredTextH3.textContent = 'Displaying all temples without any filter.';
+        centeredTextH3.textContent = 'Displaying all temples';
         break;
     }
   }

@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create and insert a new h3 element after h2
     const centeredTextH3 = document.createElement('h3');
     centeredTextH3.style.marginTop = '0.5rem';
-    centeredTextH3.textContent = 'Your Heading Here'; // Add appropriate text
+    centeredTextH3.textContent = 'All Temples'; // Add appropriate text
     centeredTextH2.insertAdjacentElement('afterend', centeredTextH3);
   
     // Hamburger click event to toggle the navigation menu

@@ -1,0 +1,143 @@
+:root {
+    --dark-1: #1b140c;
+    --light-1: #a1d3f4;
+    --dark-2: #f27107a8;
+    --light-2: #fce996d2;
+    --header-font: "Pacifico", cursive;
+    --body-font: "Roboto", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+form {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+    background-color: white;
+    max-width: 800px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--dark-1);
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    padding: 10px;
+    background-color: var(--dark-1);
+    color: var(--light-1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--dark-2);
+}
+
+form input[type="submit"]:active {
+    background-color: var(--dark-1);
+}
+
+form input[type="submit"]:focus {
+    outline: none;
+}
+
+form textarea {
+    resize: none;
+}
+
+.rating {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.ratingBox {
+    display: flex;
+    gap: 10px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.ratingBox p {
+    margin: 0;
+    width: 100%;
+}
+
+#prodName,
+#installDate {
+    color: var(--dark-1);
+    text-align: center;
+    min-width: 200px;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+button p {
+    padding: 10px;
+}
+
+button {
+    background-color: var(--dark-2);
+    color: var(--dark-1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    min-width: 200px;
+    transition: ease-in-out 0.3s;
+    height: 50px;
+    font-family: var(--body-font);
+    font-size: 1.2rem;
+}
+
+button:hover,
+button p:hover {
+    background-color: var(--dark-1);
+    color: var(--light-1);
+    transition: ease-in-out 0.3s;
+}
+
+h1,
+h2 {
+    font-family: var(--header-font);
+    color: var(--dark-1);
+}
+
+p {
+    font-family: var(--body-font);
+    font-weight: 400;
+    color: var(--dark-1);
+    font-size: 1.2rem;
+}
+
+header,
+footer {
+    background-color: var(--light-1);
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin: 0px auto;
+    background-color: var(--light-2);
+}

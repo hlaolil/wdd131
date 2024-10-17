@@ -2,7 +2,7 @@ body {
     background-color: whitesmoke
 }
 header {
-    background-color: rgb(50, 150, 218);
+    background-color: rgb(30, 98, 143);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@ nav {
     display: flex;
     flex-direction: column;
     margin: 20px;
-    background-color: gray;
+    background-color: rgb(83, 83, 83);
     top: 0;
     left: 0;
     width: 100%;
@@ -117,7 +117,7 @@ main h2 {
 
 
 footer {
-    background-color:  rgb(50, 150, 218);
+    background-color:  rgb(28, 93, 136);
     color: white;
     padding: 1rem;
     font-family: "Protest Guerrilla", sans-serif;

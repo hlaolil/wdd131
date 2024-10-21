@@ -18,37 +18,58 @@ const products = [
 ];
 
 // Capitalize Product Names and Populate Dropdown
-products.forEach(product => {
-    // Capitalize first letter of each word in the product name
-    product.name = product.name
-        .toLowerCase()
-        .split(' ')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
+function populateDropdown() {
+    products.forEach(product => {
+        // Capitalize first letter of each word in the product name
+        product.name = product.name
+            .toLowerCase()
+            .split(' ')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
 
-    // Add the product name to the select dropdown
-    displayProduct(product);
-});
+        // Add the product name to the select dropdown
+        displayProduct(product);
+    });
+}
 
 // Function to display product in the dropdown
 function displayProduct(product) {
     const productNameOption = document.createElement('option');
     productNameOption.textContent = `${product.name} (Rating: ${product.averagerating})`;
     productNameOption.value = product.id;
-    document.querySelector('#prodName').append(productNameOption);
+    document.querySelector('#productName').append(productNameOption);
 }
 
 // Track the number of reviews using localStorage
 let reviewCounter = localStorage.getItem('reviewCounter') || 0;
 
+// Display the current review count
+function displayReviewCount() {
+    let reviewCountDisplay = document.querySelector('#reviewCount');
+    if (!reviewCountDisplay) {
+        reviewCountDisplay = document.createElement('p');
+        reviewCountDisplay.id = 'reviewCount';
+        document.querySelector('form').prepend(reviewCountDisplay);
+    }
+    reviewCountDisplay.textContent = `You have submitted ${reviewCounter} reviews so far.`;
+}
+
 // Add event listener to the form for submission
-document.querySelector('form').addEventListener('submit', () => {
+document.querySelector('form').addEventListener('submit', (event) => {
+    // Prevent the default behavior for testing, comment this line to allow form submission
+    event.preventDefault(); 
+
     // Increment the review counter
     reviewCounter++;
     localStorage.setItem('reviewCounter', reviewCounter);
+
+    // Update the review count display
+    displayReviewCount();
+
+    // Optionally, reset the form or redirect the user after submission
+    event.target.reset();  // Resets the form fields (comment this out if you want to keep the data)
 });
 
-// Display the current review count (Optional, to show count in the UI if needed)
-const reviewCountDisplay = document.createElement('p');
-reviewCountDisplay.textContent = `You have submitted ${reviewCounter} reviews so far.`;
-document.querySelector('form').prepend(reviewCountDisplay);
+// Initialize the dropdown and display count
+populateDropdown();
+displayReviewCount();

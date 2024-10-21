@@ -179,3 +179,11 @@ main {
     color: #888888;
     font-style: italic;
 }
+#lastModified {
+    font-size: smaller;
+    color: white;
+}
+
+#symbol-date-name {
+    color: white;
+}

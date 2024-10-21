@@ -74,6 +74,13 @@ form select:hover {
     background-color: var(--primary-light);
 }
 
+form input[type="text"]:focus,
+form textarea:focus,
+form select:focus {
+    outline: 3px solid var(--secondary-accent);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 form textarea {
     resize: none;
     height: 150px;
@@ -103,9 +110,7 @@ form button:active {
 }
 
 form input[type="submit"]:focus,
-form textarea:focus,
-form input[type="text"]:focus,
-form select:focus {
+button:focus {
     outline: 3px solid var(--secondary-accent);
 }
 
@@ -132,8 +137,14 @@ form select:focus {
     display: none;
 }
 
+/* Highlight all stars up to the hovered one */
 .rating label:hover,
-.rating input[type="radio"]:checked + label {
+.rating label:hover ~ label {
+    color: var(--accent-color);
+}
+
+/* Highlight all stars up to the selected one */
+.rating input[type="radio"]:checked ~ label {
     color: var(--accent-color);
 }
 
@@ -167,6 +178,10 @@ button:active {
     background-color: var(--primary-dark);
 }
 
+button:focus {
+    outline: 3px solid var(--secondary-accent);
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr;
@@ -180,6 +195,7 @@ main {
     color: #888888;
     font-style: italic;
 }
+
 #lastModified {
     font-size: smaller;
     color: white;

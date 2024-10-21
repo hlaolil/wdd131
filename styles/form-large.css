@@ -147,12 +147,13 @@ button:focus {
     color: var(--accent-color);
 }
 
-#prodName,
-#installDate {
+#productName,
+#installationDate {
     color: var(--text-dark);
     text-align: center;
     border-radius: 6px;
     font-size: 1rem;
+    padding: 10px
 }
 
 button {
@@ -202,4 +203,8 @@ main {
 
 #symbol-date-name {
     color: white;
+}
+
+fieldset {
+    padding: 10px;
 }

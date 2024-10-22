@@ -208,3 +208,6 @@ main {
 fieldset {
     padding: 10px;
 }
+label {
+    display: flex
+}

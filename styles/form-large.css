@@ -24,7 +24,7 @@ body {
 
 header, footer {
     background-color: var(--primary-dark);
-    color: var(--text-light);
+    color: white;
     padding: 20px;
     text-align: center;
 }

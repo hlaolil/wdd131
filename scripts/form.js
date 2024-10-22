@@ -43,31 +43,17 @@ function displayProduct(product) {
 // Track the number of reviews using localStorage
 let reviewCounter = localStorage.getItem('reviewCounter') || 0;
 
-// Display the current review count
-function displayReviewCount() {
-    let reviewCountDisplay = document.querySelector('#reviewCount');
-    if (!reviewCountDisplay) {
-        reviewCountDisplay = document.createElement('p');
-        reviewCountDisplay.id = 'reviewCount';
-        document.querySelector('form').prepend(reviewCountDisplay);
-    }
-    reviewCountDisplay.textContent = `You have submitted ${reviewCounter} reviews so far.`;
-}
-
 // Add event listener to the form for submission
 document.querySelector('form').addEventListener('submit', (event) => {
-    // Prevent the default behavior for testing, comment this line to allow form submission
+    // Prevent the default behavior for now to handle counting first
     event.preventDefault(); 
 
     // Increment the review counter
     reviewCounter++;
     localStorage.setItem('reviewCounter', reviewCounter);
 
-    // Update the review count display
-    displayReviewCount();
-
-    // Optionally, reset the form or redirect the user after submission
-    event.target.reset();  // Resets the form fields (comment this out if you want to keep the data)
+    // Now submit the form manually
+    event.target.submit(); // This will allow the form to navigate to review.html
 });
 
 // Initialize the dropdown and display count

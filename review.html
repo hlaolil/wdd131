@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Letlotlo Hlaoli">
+    <meta name="description" content="Your submitted reviews">
     <title>Your Reviews</title>
-    <script src="review.js" defer></script> <!-- Link to your JavaScript file -->
+    <link rel="stylesheet" href="styles/review.css">
+    <script src="scripts/review.js" defer></script> <!-- Link to your JavaScript file -->
 </head>
 <body>
-    <h1>Your Reviews</h1>
-    <p id="reviewCount"></p> <!-- Placeholder for the review count -->
+    <header>
+        <h1>Your Reviews</h1>
+    </header>
+    <main>
+        <p id="reviewCount"></p> <!-- Placeholder for the review count -->
+
+        <!-- Button to return to the form page -->
+        <button onclick="window.location.href='form.html'">Post Another Review</button> <!-- Redirects to form page -->
+    </main>
 </body>
 </html>

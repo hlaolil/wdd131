@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: 'Protest Guerrilla', sans-serif; /* Ensure the font from Google Fonts is applied */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 1.5em;
+    color: #222;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #4CAF50;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Main Review Section */
+main {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.review-item {
+    border-bottom: 1px solid #ddd;
+    padding: 1em 0;
+    margin-bottom: 1em;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.review-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.review-rating {
+    font-size: 1.2em;
+    color: #FFD700; /* Gold color for stars */
+}
+
+.review-details {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.review-text {
+    font-size: 1em;
+    margin-top: 0.5em;
+    line-height: 1.4;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 1em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    main {
+        padding: 1em;
+    }
+
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .review-header h2 {
+        font-size: 1.2em;
+    }
+
+    .review-rating {
+        font-size: 1em;
+    }
+}

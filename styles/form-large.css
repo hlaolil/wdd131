@@ -31,7 +31,7 @@ header, footer {
 
 h1, h2 {
     font-family: var(--header-font);
-    color: red;
+    color: #ef233c;
 }
 
 p {

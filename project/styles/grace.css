@@ -268,3 +268,58 @@ main {
 }
 
 
+/* Hide the navigation menu by default on mobile */
+.navigation {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+}
+
+/* Show hamburger menu on mobile screens */
+@media (max-width: 800px) {
+    .navigation {
+        display: none; /* Hide the nav by default on mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger icon */
+    }
+
+    .navigation.open {
+        display: block; /* Show the navigation when hamburger is clicked */
+    }
+
+    /* Style for mobile navigation */
+    .navigation ul {
+        background-color: #fff;
+        padding: 10px;
+        list-style-type: none;
+    }
+
+    .navigation ul li {
+        margin-bottom: 10px;
+    }
+
+    .navigation ul li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+    }
+}
+
+
+

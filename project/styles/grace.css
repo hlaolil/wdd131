@@ -273,20 +273,48 @@ main {
     display: none;
 }
 
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
+/* hamburger button and menu css*/
+.ham-button {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    z-index: 1;
+    margin: 1rem;
 }
 
-.hamburger .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #333;
+.ham-button span {
+    top: 50%;
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    margin: 1px;
+    position: absolute;
+    transition: .3s ease;
+
+}
+
+.ham-button span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-button span:nth-child(3) {
+    top: 75%;
+}
+
+.ham-button.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.ham-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-button.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
 }
 
 /* Show hamburger menu on mobile screens */

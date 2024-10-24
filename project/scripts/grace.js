@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const navMenu = document.querySelector('.navigation');
 
     hamButton.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+        const isActive = navMenu.classList.toggle('active');
+        hamButton.setAttribute('aria-expanded', isActive);
     });
 });

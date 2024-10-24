@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const navMenu = document.querySelector('.navigation');
 
     hamButton.addEventListener('click', () => {
-        const isActive = navMenu.classList.toggle('active');
+        navMenu.classList.toggle('active'); // Toggle menu visibility
         hamButton.classList.toggle('active'); // Toggle the X icon
+        const isActive = navMenu.classList.contains('active');
         hamButton.setAttribute('aria-expanded', isActive);
     });
 });

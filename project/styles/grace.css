@@ -331,10 +331,19 @@ nav ul li a:hover {
     .ham-button {
         display: flex;
     }
+/* Change hamburger button to X */
+.ham-button.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
 }
-.active {
-    display: block; /* Show the menu when active */
+
+.ham-button.active .bar:nth-child(2) {
+    opacity: 0;
 }
+
+.ham-button.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 
 
 

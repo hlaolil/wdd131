@@ -344,6 +344,12 @@ nav ul li a:hover {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Show navigation when .active is added */
+.navigation.active {
+    display: block;
+    opacity: 1;
+}
+
 
 
 

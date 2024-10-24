@@ -277,8 +277,9 @@ header {
 }
 
 header img {
-    max-width: 100%;
-    height: auto;
+    max-width: 500px;
+    min-width: 250px;
+    height: 76px;
 }
 
 nav ul {

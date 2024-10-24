@@ -332,7 +332,9 @@ nav ul li a:hover {
         display: flex;
     }
 }
-
+.active {
+    display: block; /* Show the menu when active */
+}
 
 
 

@@ -40,18 +40,29 @@
 
         <section class="prescription-refill">
             <h2>Refill Your Prescription Online</h2>
-            <form action="#" method="post">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your full name" required>
+            <form action="#" method="post" id="refillForm">
+        
+                <div class="form-item">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required aria-label="Full Name">
+                </div>
 
-                <label for="prescription">Prescription Number:</label>
-                <input type="text" id="prescription" name="prescription" placeholder="Your prescription number" required>
+                <div class="form-item">
+                    <label for="prescription">Prescription Number:</label>
+                    <input type="text" id="prescription" name="prescription" placeholder="Your prescription number" required aria-label="Prescription Number">
+                </div>
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                <div class="form-item">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" pattern="^\(\d{3}\) \d{3}-\d{4}$" required aria-label="Phone Number" title="Phone number should be in the format (123) 456-7890">
+                </div>
 
-                <button type="submit">Submit Refill Request</button>
+                <div class="form-item button">
+                    <button type="submit">Submit Refill Request</button>
+                </div>
+        
             </form>
+            <p id="confirmationMessage" style="display:none; color:green;">Thank you! Your refill request has been submitted.</p>
         </section>
 
         <section class="call-to-action">

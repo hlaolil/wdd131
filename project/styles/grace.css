@@ -73,8 +73,7 @@ nav {
 }
 
 .navigation li {
-    flex: 1;
-    ;
+    flex: 1; /* Removed extra semicolon */
 }
 
 .navigation a {
@@ -85,9 +84,11 @@ nav {
     text-decoration: none;
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.navigation a:focus {
     font-weight: 700;
     background-color: var(--nav-hover-background-color);
+    outline: 2px dashed var(--nav-link-color); /* Accessibility focus style */
 }
 
 /* Hamburger Icon Styling */
@@ -96,6 +97,9 @@ nav {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    position: absolute; /* Position for better control */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
 }
 
 .ham-button .bar {
@@ -111,7 +115,10 @@ nav {
         display: flex; /* Show hamburger icon on small screens */
     }
     .navigation {
-        display: none;
+        display: none; /* Initially hidden */
+        transition: max-height 0.3s ease-out; /* Smooth transition */
+        overflow: hidden; /* Hide overflow for animation */
+        max-height: 0; /* Start hidden */
     }
     /* Display navigation when the menu is active */
     .navigation.show {
@@ -120,16 +127,18 @@ nav {
         gap: 15px;
         background-color: grey;
         position: absolute;
-        top: 60px; /* Adjust this based on header height */
+        top: 60px; /* Adjust based on header height */
         right: 10px;
         z-index: 1000;
         padding: 10px;
         text-align: left;
+        max-height: 500px; /* Adjust based on your content */
     }
-    a { 
-        color: #ffffff;
+    .navigation a {
+        color: #ffffff; /* Ensure visibility on dark background */
     }
 }
+
 
 /* Hero Section */
 .hero {

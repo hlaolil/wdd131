@@ -204,7 +204,7 @@ footer {
     height: 24px;
 }
 
-/* Form Styles */
+* Form Styles */
 form, .contact-info {
     background-color: #ffffff;
     padding: 20px;
@@ -246,7 +246,7 @@ form, .contact-info {
     transition: background-color 0.3s;
 }
 
-.form-item button:hover {
+.form-item.button button:hover {
     background-color: var(--secondary-color);
 }
 

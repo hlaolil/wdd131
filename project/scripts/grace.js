@@ -1,12 +1,35 @@
-// Toggle the navigation menu on mobile
 const hamButton = document.querySelector('.ham-button');
 const navigation = document.querySelector('.navigation');
 
+// Initial HTML content for the hamburger icon
+const hamburgerHTML = `
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+`;
+
+// Close icon HTML
+const closeIconHTML = '✖';
+
+// Track the state of the menu
+let isMenuOpen = false;
+
+// Function to toggle the menu
 hamButton.addEventListener('click', () => {
-    navigation.classList.toggle('show');
-    const expanded = hamButton.getAttribute('aria-expanded') === 'true' || false;
-    hamButton.setAttribute('aria-expanded', !expanded);
+    isMenuOpen = !isMenuOpen; // Toggle the menu state
+
+    if (isMenuOpen) {
+        // Change to close icon
+        hamButton.innerHTML = closeIconHTML;
+        navigation.classList.add('show'); // Show the navigation
+    } else {
+        // Change back to hamburger icon
+        hamButton.innerHTML = hamburgerHTML;
+        navigation.classList.remove('show'); // Hide the navigation
+    }
 });
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("refillForm");

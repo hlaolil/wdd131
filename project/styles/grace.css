@@ -41,7 +41,7 @@ header {
     height: auto;
 }
 header img {
-    max-width: 400px;
+    max-width: 500px;
     min-width: 250px;
     height: 76px;
 }
@@ -325,7 +325,7 @@ main {
 }
 
 .cta a:hover {
-    background-color: rgb(12, 150, 115); /* Darkens the background on hover */
+    background-color: darken(var(--primary-color), 10%); /* Darkens the background on hover */
 }
 
 /* Grid Layout */
@@ -366,8 +366,3 @@ section {
 .refill {
         margin-top: -150px; /* Adjust as needed */
     }
-
-.grid-item img {
-        width: 200px; /* or any other fixed size */
-        height: 200px; /* or any other fixed size */
-        object-fit: cover; /* options are 'cover', 'contain', or 'fill' */}

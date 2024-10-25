@@ -370,5 +370,4 @@ section {
 .grid-item img {
         width: 200px; /* or any other fixed size */
         height: 200px; /* or any other fixed size */
-        object-fit: cover; /* options are 'cover', 'contain', or 'fill' */
-}
+        object-fit: cover; /* options are 'cover', 'contain', or 'fill' */}

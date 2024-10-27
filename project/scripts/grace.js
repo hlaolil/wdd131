@@ -30,7 +30,6 @@ hamButton.addEventListener('click', () => {
 });
 
 
-
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("refillForm");
     const confirmationMessage = document.getElementById("confirmationMessage");

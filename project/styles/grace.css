@@ -51,7 +51,7 @@ p, footer p {
     font-family: var(--paragraph-font);
     color: var(--secondary-color);
     padding: 25px;
-    margin: 0;
+    margin: 10px;
     text-align: center;
     font-size: 1.1em;
 }

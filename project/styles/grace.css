@@ -378,3 +378,8 @@ section {
     height: 200px; /* or any other fixed size */
     object-fit: cover; /* options are 'cover', 'contain', or 'fill' */
 }
+.product img{
+    object-fit: cover;
+    width: 200px; /* or any other fixed size */
+    height: 250px; /* or any other fixed size */
+}

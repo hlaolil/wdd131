@@ -191,7 +191,7 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     max-width: 100%;
     margin: 0 auto;
@@ -383,4 +383,11 @@ section {
     object-fit: cover;
     width: 200px; /* or any other fixed size */
     height: 250px; /* or any other fixed size */
+}
+
+#lastModified p {
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    align-content: center;
 }

@@ -26,20 +26,12 @@ h1, h2, h3, h4, h5, h6 {
 header {
     padding: 20px;
     background-color: var(--accent1-color);
-    margin: 1rem auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
     border-bottom: 1px solid #ccc;
 }
 
-/* Logo */
-.logo img {
-    margin: 0 0.25rem 0 1rem;
-    width: 64px;
-    height: auto;
-}
 header img {
     max-width: 400px;
     min-width: 250px;
@@ -59,10 +51,10 @@ p, footer p {
 footer p {
     color: #ffffff;
 }
+
 /* Navigation */
 nav {
     background-color: var(--nav-background-color);
-    text-align: right;
 }
 
 .navigation {
@@ -73,7 +65,7 @@ nav {
 }
 
 .navigation li {
-    flex: 1; /* Removed extra semicolon */
+    flex: 1;
 }
 
 .navigation a {
@@ -92,13 +84,13 @@ nav {
 
 /* Hamburger Icon Styling */
 .ham-button {
-    display: none; /* Hide by default */
+    display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
-    position: absolute; /* Position for better control */
-    top: 25px; /* Adjust as needed */
-    right: 15px; /* Adjust as needed */
+    position: absolute;
+    top: 25px;
+    right: 15px;
 }
 
 .ham-button .bar {
@@ -108,45 +100,38 @@ nav {
     border-radius: 3px;
 }
 
-
-
 /* Mobile Styles */
 @media (max-width: 768px) {
     .ham-button {
-        display: flex; /* Show hamburger icon on small screens */
+        display: flex;
     }
     .navigation {
-        display: none; /* Initially hidden */
-        transition: max-height 0.3s ease-out; /* Smooth transition */
-        overflow: hidden; /* Hide overflow for animation */
-        max-height: 0; /* Start hidden */
+        display: none;
+        transition: max-height 0.3s ease-out;
+        overflow: hidden;
+        max-height: 0;
     }
-    /* Display navigation when the menu is active */
     .navigation.show {
         display: flex;
         flex-direction: column;
         gap: 15px;
         background-color: grey;
         position: absolute;
-        top: 60px; /* Adjust based on header height */
+        top: 60px;
         right: 10px;
         z-index: 1000;
         padding: 10px;
-        text-align: left;
-        max-height: 500px; /* Adjust based on your content */
+        max-height: 500px;
     }
     .navigation a {
-        color: #ffffff; /* Ensure visibility on dark background */
+        color: #ffffff;
     }
-    
 }
-
 
 /* Hero Section */
 .hero {
     position: relative;
     height: 400px;
-    overflow: hidden;
 }
 
 .hero img {
@@ -159,27 +144,24 @@ nav {
 .hero h1 {
     position: absolute;
     top: 10%;
-    left: 45%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: var(--accent1-color);
     font-size: 2.0em;
-    font-family: var(--heading-font);
     background-color: rgba(12, 12, 12, 0.6);
     padding: 2px;
     border-radius: 5px;
 }
 
-/* Article */
-article {
-    background-color: rgba(255, 255, 255, 0.9);
+/* Contact Info */
+.contact-info {
+    background-color: #ffffff;
     padding: 20px;
-    margin: 20px 0;
-}
-
-article img {
-    float: right;
-    margin-left: 20px;
-    width: 250px !important;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 600px;
+    margin: 20px auto;
+    border: 2px solid grey;
 }
 
 /* Footer */
@@ -207,6 +189,30 @@ footer {
     height: 24px;
 }
 
+/* Employee Profiles Section */
+.employee-profiles {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--primary-color);
+}
+
+/* General Styles for Main Section */
+main {
+    padding: 20px;
+    background-color: var(--accent2-color);
+}
+
 /* Form Styles */
 form {
     padding: 25px;
@@ -215,19 +221,9 @@ form {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
     width: 85%;
-    background-color: var(--text-light);
     display: grid;
     gap: 25px;
-    max-width: 850px;}
-
-.contact-info {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 600px;
-    margin: 20px auto;
-    border: 2px solid grey;
+    max-width: 850px;
 }
 
 .form-item {
@@ -266,128 +262,6 @@ form {
     background-color: var(--secondary-color);
 }
 
-/* Employee Profiles Section */
-.employee-profiles {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.profile {
-    text-align: center;
-}
-
-.profile img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    border: 2px solid var(--primary-color);
-}
-
-/* General Styles for Main Section */
-main {
-    padding: 20px;
-    background-color: var(--accent2-color);
-}
-
-/* Call to Action Styles */
-.cta {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.cta h1 {
-    font-size: 2.2em;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.cta p {
-    font-size: 1.2em;
-    color: var(--primary-color);
-}
-
-.cta a {
-    font-size: 1.2em;
-    color: #fff;
-    background-color: var(--primary-color);
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.cta a:hover {
-    background-color: darkolivegreen; /* Darkens the background on hover */
-}
-
-/* Grid Layout */
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.grid-item {
-    background-color: var(--accent1-color);
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.grid-item img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.grid-item h3 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.grid-item p {
-    font-size: 1.1em;
-    color: var(--secondary-color);
-}
-
-section {
-    margin-top: 10px; /* Adjust top and bottom space */
-    margin-bottom: 10px;
-    padding-top: 5px; /* Adjust padding if needed */
-    padding-bottom: 5px;
-    top: 50%;
-}
-
-.refill {
-        margin-top: -150px; /* Adjust as needed */
-    }
-
-.grid-item img {
-        width: 200px; /* or any other fixed size */
-        height: 200px; /* or any other fixed size */
-        object-fit: cover; /* options are 'cover', 'contain', or 'fill' */
-}
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;    
-}
-
-.service-grid img {
-    width: 200px; /* or any other fixed size */
-    height: 200px; /* or any other fixed size */
-    object-fit: cover; /* options are 'cover', 'contain', or 'fill' */
-}
-.product img{
-    object-fit: cover;
-    width: 200px; /* or any other fixed size */
-    height: 250px; /* or any other fixed size */
-}
-
 #lastModified p {
     text-align: center;
-    align-self: center;
-    align-items: center;
-    align-content: center;
 }

@@ -221,7 +221,7 @@ form {
     gap: 25px;
     max-width: 850px;}
 
-.contact-info {
+.contact-msg {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
@@ -229,6 +229,7 @@ form {
     width: 600px;
     margin: 20px auto;
     border: 2px solid grey;
+    margin-top: 0;
 }
 
 .form-item {

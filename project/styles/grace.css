@@ -224,9 +224,10 @@ form {
 .contact-msg {
     background-color: #ffffff;
     padding: 20px;
-    width: 600px;
     margin: 20px auto;
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-item {
@@ -267,6 +268,7 @@ form {
 /* Employee Profiles Section */
 .employee-profiles {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     margin-bottom: 20px;
 }

@@ -394,3 +394,6 @@ section {
     position: relative;
     z-index: 1;
 }
+#map {
+    text-align: center;
+}

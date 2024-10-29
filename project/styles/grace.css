@@ -147,6 +147,7 @@ nav {
     position: relative;
     height: 400px;
     overflow: hidden;
+    margin-bottom: 10px
 }
 
 .hero img {
@@ -293,7 +294,8 @@ main {
 /* Call to Action Styles */
 .cta {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px
 }
 
 .cta h1 {

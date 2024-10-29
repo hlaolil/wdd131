@@ -147,7 +147,7 @@ nav {
     position: relative;
     height: 400px;
     overflow: hidden;
-    margin-bottom: 10px
+    margin-bottom: 0;
 }
 
 .hero img {
@@ -295,7 +295,7 @@ main {
 .cta {
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 20px
+    margin-top: 0;
 }
 
 .cta h1 {
@@ -354,7 +354,7 @@ main {
 }
 
 section {
-    margin-top: 10px; /* Adjust top and bottom space */
+    margin-top: 0; /* Adjust top and bottom space */
     margin-bottom: 10px;
     padding-top: 5px; /* Adjust padding if needed */
     padding-bottom: 5px;

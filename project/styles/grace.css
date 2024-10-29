@@ -390,3 +390,7 @@ section {
 #lastModified p {
     text-align: center;
 }
+#name {
+    position: relative;
+    z-index: 1;
+}

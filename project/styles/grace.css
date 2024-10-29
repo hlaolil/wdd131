@@ -138,6 +138,10 @@ nav {
     .navigation a {
         color: #ffffff; /* Ensure visibility on dark background */
     }
+    .employee-profiles {
+        display: flex;
+        flex-direction: column;
+    }
     
 }
 
@@ -268,7 +272,6 @@ form {
 /* Employee Profiles Section */
 .employee-profiles {
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     margin-bottom: 20px;
 }

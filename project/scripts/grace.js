@@ -1,5 +1,5 @@
 const hamButton = document.querySelector('.ham-button');
-const navigation = document.querySelector('#navigation');
+const navigation = document.querySelector('.navigation');
 
 // Initial HTML content for the hamburger icon
 const hamburgerHTML = `
@@ -17,14 +17,12 @@ let isMenuOpen = false;
 hamButton.addEventListener('click', () => {
     isMenuOpen = !isMenuOpen; // Toggle the menu state
 
-    if (isMenuOpen) {
-        // Change to close icon
-        hamButton.innerHTML = closeIconHTML;
+     if (isMenuOpen) {
+        hamButton.innerHTML = closeIconHTML; // Change to close icon
         navigation.classList.add('show'); // Show the navigation
         hamButton.setAttribute('aria-expanded', 'true'); // Update ARIA attribute
     } else {
-        // Change back to hamburger icon
-        hamButton.innerHTML = hamburgerHTML;
+        hamButton.innerHTML = hamburgerHTML; // Change back to hamburger icon
         navigation.classList.remove('show'); // Hide the navigation
         hamButton.setAttribute('aria-expanded', 'false'); // Update ARIA attribute
     }

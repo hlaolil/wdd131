@@ -2,11 +2,11 @@ const hamButton = document.querySelector('.ham-button');
 const navigation = document.querySelector('.navigation');
 
 // Initial HTML content for the hamburger icon
-const hamburgerHTML = `
+const hamburgerHTML = 
     <span class="bar"></span>
     <span class="bar"></span>
     <span class="bar"></span>
-`;
+;
 
 // Close icon HTML
 const closeIconHTML = '✖';

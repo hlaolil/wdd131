@@ -29,16 +29,21 @@ hamButton.addEventListener('click', () => {
     }
 });
 
-
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("refillForm");
     const confirmationMessage = document.getElementById("confirmationMessage");
+    const prescriptionInput = document.getElementById("prescription");
+
+    // Prefill the prescription number from localStorage, if it exists
+    const savedPrescription = localStorage.getItem("prescriptionNumber");
+    if (savedPrescription) {
+        prescriptionInput.value = savedPrescription;
+    }
 
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent form submission to demonstrate the message
 
         // Validate the prescription number (assuming it should be digits only, for example)
-        const prescriptionInput = document.getElementById("prescription");
         const prescriptionPattern = /^\d+$/; // Adjust based on your prescription format
 
         if (!prescriptionPattern.test(prescriptionInput.value)) {
@@ -46,6 +51,9 @@ document.addEventListener("DOMContentLoaded", function() {
             prescriptionInput.focus();
             return;
         }
+
+        // Save the prescription number to localStorage
+        localStorage.setItem("prescriptionNumber", prescriptionInput.value);
 
         // If all validations pass, display confirmation message
         confirmationMessage.style.display = "block";

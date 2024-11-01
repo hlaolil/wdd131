@@ -1,5 +1,5 @@
 const hamButton = document.querySelector('.ham-button');
-const navigation = document.querySelector('.navigation');
+const navigation = document.querySelector('#navigation');
 
 // Initial HTML content for the hamburger icon
 const hamburgerHTML = `

@@ -14,7 +14,6 @@ const closeIconHTML = '✖';
 // Track the state of the menu
 let isMenuOpen = false;
 
-// Function to toggle the menu
 hamButton.addEventListener('click', () => {
     isMenuOpen = !isMenuOpen; // Toggle the menu state
 
@@ -22,10 +21,12 @@ hamButton.addEventListener('click', () => {
         // Change to close icon
         hamButton.innerHTML = closeIconHTML;
         navigation.classList.add('show'); // Show the navigation
+        hamButton.setAttribute('aria-expanded', 'true'); // Update ARIA attribute
     } else {
         // Change back to hamburger icon
         hamButton.innerHTML = hamburgerHTML;
         navigation.classList.remove('show'); // Hide the navigation
+        hamButton.setAttribute('aria-expanded', 'false'); // Update ARIA attribute
     }
 });
 

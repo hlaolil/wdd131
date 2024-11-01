@@ -70,3 +70,51 @@ year.textContent = date.getFullYear();
 // Get the last modification date of the home page
 let lastMod = document.lastModified;
 lastModified.textContent = `Last Modified: ${lastMod}`;
+
+// Define the services array
+const services = [
+    {
+        image: "images/consultation.webp",
+        altText: "Health Consultation",
+        title: "Health Consultations",
+        description: "Book a consultation with our licensed pharmacists for personalized health advice and medication reviews."
+    },
+    {
+        image: "images/pick-up.webp",
+        altText: "In-Store Pickup",
+        title: "In-Store Pickup",
+        description: "Refill your prescriptions online and pick them up at your nearest Grace Pharmacy location."
+    },
+    {
+        image: "images/vaccination.webp",
+        altText: "Vaccination Service",
+        title: "Vaccination Services",
+        description: "Get your vaccinations conveniently at our pharmacy. Book an appointment online or walk in during business hours."
+    },
+    {
+        image: "images/wellness.webp",
+        altText: "Wellness Products",
+        title: "Wellness Products",
+        description: "Browse our range of health and wellness products, from supplements to skincare, available in-store and online."
+    }
+];
+
+// Select the container for grid items
+const gridContainer = document.querySelector('.service-grid');
+
+// Render each service dynamically
+services.forEach(service => {
+    const gridItem = document.createElement('div');
+    gridItem.classList.add('grid-item');
+
+    // Use template literals for the inner HTML
+    gridItem.innerHTML = `
+        <img src="${service.image}" alt="${service.altText}" loading="lazy" width="20%">
+        <h3>${service.title}</h3>
+        <p>${service.description}</p>
+    `;
+
+    // Append each grid item to the container
+    gridContainer.appendChild(gridItem);
+});
+

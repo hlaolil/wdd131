@@ -58,4 +58,3 @@ document.querySelector('form').addEventListener('submit', (event) => {
 
 // Initialize the dropdown and display count
 populateDropdown();
-displayReviewCount();

@@ -133,3 +133,6 @@ header {
 #symbol-date-name {
     color: white;
 }
+
+/* --- Mobile fixes --- */
+.data, .weather { width: auto; max-width: 350px; box-sizing: border-box; }

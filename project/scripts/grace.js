@@ -35,11 +35,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Prefill the prescription number from localStorage, if it exists
     const savedPrescription = localStorage.getItem("prescriptionNumber");
-    if (savedPrescription) {
+    if (savedPrescription && prescriptionInput) {
         prescriptionInput.value = savedPrescription;
     }
 
-    form.addEventListener("submit", function(event) {
+    if (form) form.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent form submission to demonstrate the message
 
         // Validate the prescription number (assuming it should be digits only, for example)
@@ -99,6 +99,7 @@ function generateServiceGrid() {
     ];
 
     const servicesContainer = document.getElementById('list');
+    if (!servicesContainer) return; // only the home page lists services
     
     services.forEach(service => {
         const serviceHTML = `

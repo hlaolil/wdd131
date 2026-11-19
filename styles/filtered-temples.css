@@ -133,3 +133,6 @@ footer {
 #symbol-date-name {
     color: white
 }
+/* --- Mobile fixes --- */
+figure { max-width: 100%; box-sizing: border-box; }
+figure img { max-width: 100%; height: auto; }

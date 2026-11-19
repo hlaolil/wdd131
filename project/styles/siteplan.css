@@ -70,3 +70,6 @@ footer p {
     font-size: 0.9rem;
 }
 
+
+/* --- Mobile fixes --- */
+img { max-width: 100%; height: auto; }
